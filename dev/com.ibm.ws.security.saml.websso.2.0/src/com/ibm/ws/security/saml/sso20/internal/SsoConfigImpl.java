@@ -581,8 +581,10 @@ public class SsoConfigImpl extends PkixTrustEngineConfig implements SsoConfig, F
     public String getSignatureMethodAlgorithm() {
         if ("SHA256".equalsIgnoreCase(signatureMethodAlgorithm)) {
             return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA256;
-        } else if ("SHA1".equalsIgnoreCase(signatureMethodAlgorithm)) {
-            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA1;
+        } else if ("SHA384".equalsIgnoreCase(signatureMethodAlgorithm)) {
+            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA384;
+        } else if ("SHA512".equalsIgnoreCase(signatureMethodAlgorithm)) {
+            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA512;
         }
         return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA256;
     }

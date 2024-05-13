@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License 2.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-2.0/
- * 
+ *
  * SPDX-License-Identifier: EPL-2.0
  *
  * Contributors:
@@ -309,10 +309,10 @@ public class RsSamlConfigImpl extends PkixTrustEngineConfig implements SsoConfig
     public String getSignatureMethodAlgorithm() {
         if ("SHA256".equalsIgnoreCase(signatureMethodAlgorithm)) {
             return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA256;
-        } else if ("SHA128".equalsIgnoreCase(signatureMethodAlgorithm)) {
-            return SignatureConstants.MORE_ALGO_NS + "rsa-sha128"; //???????
-        } else if ("SHA1".equalsIgnoreCase(signatureMethodAlgorithm)) {
-            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA1;
+        } else if ("SHA384".equalsIgnoreCase(signatureMethodAlgorithm)) {
+            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA384;
+        } else if ("SHA512".equalsIgnoreCase(signatureMethodAlgorithm)) {
+            return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA512;
         }
         return SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA256;
     }
